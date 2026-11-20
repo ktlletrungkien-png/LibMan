@@ -30,7 +30,9 @@
             message = "Hạn thẻ không được vượt quá thời hạn của thành viên trường.";
         } else {
             // Bước 11-13: gọi ReaderCard1DAO.checkExistCard() kiểm tra đã có thẻ chưa
-            boolean existCard = (new ReaderCard1DAO()).checkExistCard(inSchoolId);
+            ReaderCard1DAO dao2 = new ReaderCard1DAO();
+            boolean existCard = dao2.checkExistCard(inSchoolId);
+            
             if (existCard) {
                 message = "Thành viên này đã có thẻ bạn đọc.";
             } else {
