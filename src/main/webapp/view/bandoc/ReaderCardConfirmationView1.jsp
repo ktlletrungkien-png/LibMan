@@ -29,7 +29,10 @@
             readerCard.setStatus("ACTIVE");
 
             // Bước 20-22: gọi ReaderCard1DAO.saveReaderCard() lưu thẻ, nhận lại số thẻ
-            String readerCardNumber = (new ReaderCard1DAO()).saveReaderCard(readerCard);
+//            String readerCardNumber = (new ReaderCard1DAO()).saveReaderCard(readerCard);
+            ReaderCard1DAO dao = new ReaderCard1DAO();
+            String readerCardNumber = dao.saveReaderCard(readerCard);
+            
             if (readerCardNumber != null) {
                 // Bước 23: gọi trang Result kèm thẻ vừa lưu (số thẻ nằm trong readerCard)
                 session.setAttribute("readerCard", readerCard);

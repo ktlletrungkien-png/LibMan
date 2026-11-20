@@ -19,7 +19,9 @@
         Date inExpireDate = Date.valueOf(strExpireDate);
 
         // Bước 5-10: gọi SchoolMember1DAO.getSchoolMemberBySchoolId() lấy thành viên trường
-        SchoolMember1 schoolMember = (new SchoolMember1DAO()).getSchoolMemberBySchoolId(inSchoolId);
+//        SchoolMember1 schoolMember = (new SchoolMember1DAO()).getSchoolMemberBySchoolId(inSchoolId);
+        SchoolMember1DAO dao = new SchoolMember1DAO();
+        SchoolMember1 schoolMember = dao.getSchoolMemberBySchoolId(inSchoolId);
 
         if (schoolMember == null) {
             message = "Không tìm thấy thành viên trường có mã " + inSchoolId + ".";
