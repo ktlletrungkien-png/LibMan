@@ -5,6 +5,7 @@ nbactions.xml
 nb-configuration.xml
 database/
 docs/
+plantuml/
 
 # Compiled files
 *.class

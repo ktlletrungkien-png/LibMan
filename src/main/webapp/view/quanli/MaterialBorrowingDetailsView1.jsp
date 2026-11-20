@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.sql.Date,java.text.SimpleDateFormat,dao.*,model.*" %>
+    <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.sql.Date,java.text.SimpleDateFormat,dao.*,model.*" %>
 <%@ include file="auth.jsp" %>
 <%
     SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
@@ -15,7 +15,9 @@
         if (listMaterialStatistic != null) {
             borrowingStatistic = listMaterialStatistic[Integer.parseInt(strIndex)];
             // Bước 17-22: gọi LoanDetail1DAO.getLoanDetailsByMaterialBorrowingStatistics()
-            listLoanDetail = (new LoanDetail1DAO()).getLoanDetailsByMaterialBorrowingStatistics(borrowingStatistic);
+//            listLoanDetail = (new LoanDetail1DAO()).getLoanDetailsByMaterialBorrowingStatistics(borrowingStatistic);
+            LoanDetail1DAO dao = new LoanDetail1DAO();
+            listLoanDetail = dao.getLoanDetailsByMaterialBorrowingStatistics(borrowingStatistic);
             session.setAttribute("borrowingStatistic", borrowingStatistic);
             session.setAttribute("listLoanDetail", listLoanDetail);
         }

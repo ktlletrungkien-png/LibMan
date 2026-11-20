@@ -17,7 +17,9 @@
             message = "Ngày kết thúc phải sau hoặc bằng ngày bắt đầu.";
         } else {
             // Bước 8-13: gọi MaterialBorrowingStatistics1DAO.getMaterialBorrowingStatistics()
-            listMaterialStatistic = (new MaterialBorrowingStatistics1DAO()).getMaterialBorrowingStatistics(inStartDate, inEndDate);
+//            listMaterialStatistic = (new MaterialBorrowingStatistics1DAO()).getMaterialBorrowingStatistics(inStartDate, inEndDate);
+            MaterialBorrowingStatistics1DAO dao = new MaterialBorrowingStatistics1DAO();
+            listMaterialStatistic = dao.getMaterialBorrowingStatistics(inStartDate, inEndDate);
             // giữ danh sách để bước 15-16 lấy "tài liệu thống kê đã chọn" truyền sang trang chi tiết
             session.setAttribute("listMaterialStatistic", listMaterialStatistic);
         }
