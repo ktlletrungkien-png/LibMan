@@ -21,7 +21,9 @@
     }
 
     // Bước 26-31: gọi LoanSlip1DAO.getLoanSlipByLoanDetail()
-    LoanSlip1 outLoanSlip = (new LoanSlip1DAO()).getLoanSlipByLoanDetail(loanDetail);
+//    LoanSlip1 outLoanSlip = (new LoanSlip1DAO()).getLoanSlipByLoanDetail(loanDetail);
+    LoanSlip1DAO dao = new LoanSlip1DAO();
+    LoanSlip1 outLoanSlip = dao.getLoanSlipByLoanDetail(loanDetail);
     if (outLoanSlip == null) {
         response.sendRedirect("StatisticSelectionView1.jsp");
         return;
