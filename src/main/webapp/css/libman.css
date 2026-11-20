@@ -1,0 +1,36 @@
+/* Giao diện theo Hình 3.3 và 3.4 của báo cáo */
+* { box-sizing: border-box; }
+body { margin: 0; background: #E9EDF3; font-family: Inter, "Segoe UI", Arial, Helvetica, sans-serif; color: #1B2433; }
+.scr { max-width: 860px; margin: 28px auto; background: #F3F5F8; border: 2px solid #9AA6BA; border-radius: 14px; overflow: hidden; }
+.hd { background: #17325C; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 0 22px; min-height: 54px; font-size: 15px; }
+.hd b { font-size: 22px; }
+.hd form { margin: 0; display: flex; align-items: center; gap: 12px; }
+.hd input[type=submit] { margin: 0; background: transparent; color: #fff; border: 1.5px solid #fff; padding: 6px 14px; font-size: 14px; }
+.bd { padding: 20px 24px 26px; }
+h2 { margin: 0 0 14px; font-size: 24px; font-weight: 700; }
+label { display: block; font-size: 16px; font-weight: 600; margin: 10px 0 6px; }
+input[type=text], input[type=date], input[type=password], select {
+    width: 100%; background: #fff; border: 2px solid #8A95A8; border-radius: 6px; padding: 9px 12px; font-size: 17px; font-family: inherit; }
+input[type=submit], button { display: inline-block; background: #1F5FBF; color: #fff; font-weight: 600; padding: 10px 22px; border: 2px solid #1F5FBF;
+    border-radius: 6px; font-size: 17px; font-family: inherit; margin: 16px 12px 0 0; cursor: pointer; }
+input[type=submit].btn2 { background: #fff; color: #1F5FBF; }
+td button { padding: 3px 12px; font-size: 14px; margin: 0; }
+a { color: #1F5FBF; text-decoration: underline; font-size: 17px; margin-right: 20px; }
+.card { background: #fff; border: 1.5px solid #C9D2E0; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; }
+.card.ok { background: #DDF3E4; border-color: #8CCB9F; color: #14532D; font-size: 20px; font-weight: 700; }
+.kv { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; font-size: 17px; }
+.kv.one { grid-template-columns: 1fr; }
+.kv span { display: block; font-size: 14px; color: #556070; }
+.kv .full { grid-column: 1 / 3; }
+.row2 { display: flex; gap: 14px; }
+.row2 > div { flex: 1; }
+.actions { margin: 14px 0; }
+.actions input[type=submit] { margin: 0 14px 0 0; }
+table { border-collapse: collapse; width: 100%; background: #fff; font-size: 16px; margin: 8px 0; }
+th { background: #EAEFF7; text-align: left; padding: 8px 10px; border-bottom: 2px solid #C9D2E0; font-weight: 600; }
+td { padding: 8px 10px; border-bottom: 1.5px solid #E3E8F0; }
+td a { margin-right: 0; font-size: 16px; }
+.num { text-align: right; }
+tfoot td { background: #EAEFF7; font-weight: 700; border-bottom: none; }
+.error { color: #B00020; font-weight: 600; }
+.nav { margin-top: 18px; }
